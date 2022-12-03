@@ -1,9 +1,10 @@
 import { StyleSheet, Text, View, Button, Image, TextInput } from "react-native";
+import AuthScreen from "./screen/AuthScreen";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
+      {/* <View style={styles.header}>
         <View>
           <Text style={styles.heading}>Good Evening</Text>
           <Text
@@ -25,18 +26,8 @@ export default function App() {
             }}
           />
         </View>
-      </View>
-      <TextInput
-        placeholder="number filed"
-        keyboardType="numeric"
-        style={{
-          backgroundColor: "#fff",
-          height: 40,
-          width: "80%",
-          marginTop: 20,
-          paddingHorizontal: 10,
-        }}
-      />
+      </View> */}
+      <AuthScreen />
     </View>
   );
 }
@@ -44,7 +35,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fefae0",
+    // backgroundColor: "#fefae0",
     paddingTop: 60,
   },
   header: {
