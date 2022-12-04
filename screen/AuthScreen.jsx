@@ -1,12 +1,16 @@
+import { useState } from "react";
 import { StyleSheet, View, Text, TextInput, Image } from "react-native";
 
 import authImage from "../assets/icons/auth-screen.jpg";
 const authImageuri = Image.resolveAssetSource(authImage).uri;
 
-import InputField from "../components/InputField";
-import PrimaryBtn from "../components/PrimaryBtn";
+import MobNumInput from "../components/login/NumberInput";
 
 export default function AuthScreen() {
+  const updateMobNumber = (number) => {
+    console.log(number);
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.imageView}>
@@ -14,8 +18,7 @@ export default function AuthScreen() {
         <Text style={styles.title}>Verify mobile number</Text>
       </View>
       <View style={styles.inputView}>
-        <InputField displayText={"Enter mobile number"} />
-        <PrimaryBtn displayText={"Next"} />
+        <MobNumInput updateMobNumber={updateMobNumber} />
       </View>
     </View>
   );
